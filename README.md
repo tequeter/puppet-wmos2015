@@ -129,17 +129,20 @@ for the configuration options.
 
 Here is an excerpt from our profile::wmos2015 class:
 
-    class { '::wmos2015::app':
-      manage_jboss       => true,
-      manage_jboss_group => true,
-      jboss_version      => '6.3.3',
-      java_home          => $java_home,
-      manage_sd          => true,
-      sd_package         => 'idg-wmos2015-sd',
-    }
+```puppet
+class { '::wmos2015::app':
+    manage_jboss       => true,
+    manage_jboss_group => true,
+    jboss_version      => '6.3.3',
+    java_home          => $java_home,
+    manage_sd          => true,
+    sd_package         => 'idg-wmos2015-sd',
+}
+```
 
 And Hiera configuration:
 
+```yaml
     wmos2015::app::oracle_home: '/opt/oracle-client12/product/12.1.0/client'
     wmos2015::app::sd_managed_servers:
       - thisserver.ourdomain
@@ -177,6 +180,7 @@ And Hiera configuration:
     wmos2015::app::db_ar_sid: ''
     wmos2015::app::db_ar_user: ''
     wmos2015::app::db_ar_pass: ''
+```
 
 ## Reference
 
