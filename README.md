@@ -89,6 +89,7 @@ See also: [Limitations].
 ### Beginning with wmos2015::app
 
 Things you'll probably want to do somewhere in your Puppet config:
+
 * Enabling the software distribution channel that provides packages like
   "sharutils" (Server Optional in Redhat-based OSes).
 * Installing an Oracle client.
@@ -103,6 +104,7 @@ Then declare the main `wmos2015::app` class with the required arguments (see
 below).
 
 The actual installation has three steps:
+
 1. Run Puppet a first time to configure the system, install System Director etc.
 2. Use System Director to install the components you need.
 3. Run Puppet again to fix permissions, install patches etc.
